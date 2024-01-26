@@ -16,6 +16,8 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  border-right: 1px solid lightgrey;
+  width: 115px;
 }
 
 /* Change background color of buttons on hover */
@@ -34,4 +36,10 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+.headerText{
+  margin: 10px;
+  padding: 5px;
+  font-size: larger;
 }
