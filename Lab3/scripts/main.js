@@ -1,6 +1,6 @@
 
 // This function is called when any of the tab is clicked
-// It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
+// It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp 
 
 function openInfo(evt, tabName) {
 
@@ -48,16 +48,21 @@ function populateListProductChoices(slct1, slct2) {
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
-		checkbox.value = productName;
+		checkbox.value = productName.name + " $"+ productName.price;
 		s2.appendChild(checkbox);
 		
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
-
-
+		label.htmlFor = productName.name + " $"+ productName.price;
+		label.appendChild(document.createTextNode(productName.name + " $"+ productName.price));
 		s2.appendChild(label);
+
+		var image = document.createElement("img");
+        image.src = productName.imageName;
+        image.alt = productName.name;
+        image.style.width = "100px";
+		image.style.height = "100px"; // Adjust the width as needed
+        s2.appendChild(image);
 		
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));    
