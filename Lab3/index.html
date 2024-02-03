@@ -2,7 +2,7 @@
 <html>
 <head>
   <! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
-	<link href="styles/style2.css" rel="stylesheet" type="text/css">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -24,28 +24,44 @@
 
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
-  <h3>Client Information</h3>
-  <p>Tell us a bit about your dietary restrictions. This will help us narrow your search to what you're looking for!</p>
+  
+    <h3>Client Information</h3>
+    <p>Tell us a bit about your dietary restrictions. This will help us narrow your search to what you're looking for!</p>
       Select your dietary restrictions:
-      <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-      <option value=""></option>
-      <option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">GlutenFree</option>
-    <option value="Organic">Organic</option>
-    <option value="VegetarianAndGlutenFree">Both Vegetarian and GlutenFree</option>
-    <option value="VegetarianAndOrganic">Both Vegetarian and Organic</option>
-    <option value="GlutenFreeAndOrganic">Both Organic and GlutenFree</option>
-    <option value="AllRestrictions">All Restrictions</option>
-    <option value="None">No restrictions</option>
+      <select id="dietSelect" name="dietSelect" class="filterSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+        <option value=""></option>
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="GlutenFree">GlutenFree</option>
+        <option value="Organic">Organic</option>
+        <option value="VegetarianAndGlutenFree">Both Vegetarian and GlutenFree</option>
+        <option value="VegetarianAndOrganic">Both Vegetarian and Organic</option>
+        <option value="GlutenFreeAndOrganic">Both Organic and GlutenFree</option>
+        <option value="AllRestrictions">All Restrictions</option>
+        <option value="None">No restrictions</option>
       </select>
+  
 </div>
 
 <div id="Products" class="tabcontent" style="display: none;">
   <h3>Your targeted products</h3>
   <p>We've filtered our inventory to match your restrictions</p>
       Choose items to buy:
-        <div id="displayProduct"></div>
-        <button id="addCart" type="button" class="block" onclick="selectedItems()">
+      <br>
+      Filter: 
+      <select id="filter" name="filter" class="filterSelect" onchange="populateFilteredList(this.id, 'filteredDisplay')">
+        <option value=""></option>
+        <option value="All">All</option>
+        <option value="Vegetable">Vegetable</option>
+      <option value="Fruit">Fruit</option>
+      <option value="Dairy">Dairy</option>
+      <option value="Cereal">Cereal</option>
+      <option value="Protein">Protein</option>
+      <option value="Carbohydrate">Carbohydrate</option>
+        </select>
+        <p></p>
+        <div hidden id="displayProduct"></div>
+        <div id="filteredDisplay"></div>
+        <button id="addCart" type="button" class="block" onclick="cartItem()">
           Add selected items to cart.
       </button>
 </div>
@@ -59,6 +75,6 @@
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>
 
-<p id="signature">Website designed by Christian Gibbs, IleriOluwa Fasubaa, Keynaan Ismail</p>
+<p id="signature" class="bottomSignature">Website designed by Christian Gibbs, IleriOluwa Fasubaa, Keynaan Ismail</p>
 </body>
 </html>
