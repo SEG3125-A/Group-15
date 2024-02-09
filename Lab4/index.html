@@ -28,12 +28,11 @@
 <body>
     <!--Company information VISIBILITY-->
     <!--Container holding the company title, logo and address-->
-    <div class="container-md p-3 my-3 border bg-dark text-white">
-        <h1>Welcome to Ottawa Bike Shop</h1>
-        <p>We'll take care of your bicycle problems!</p>
-        <p>Find us at 336 Elgen St. Ottawa</p> 
-        <img class="logo-img-top" src="images/logo.jpg" alt="Logo image" style="width:20%">
-
+    <div class="container-md p-3 mb-3 border bg-dark text-white justify-content-center">
+        <div class="d-flex flex-row">
+            <img class="logo-img-top p-3" src="images/logo.jpg" alt="Logo image" style="width:10%">
+            <h1 class="p-4">Ottawa Bike Shop</h1>
+        </div>
     </div>
 
     <!--Services + Prices block-->
@@ -45,6 +44,7 @@
         <table class="table table-primary table-hover">
             <thead>
             <tr>
+                <th>Image Description</th>
                 <th>Service</th>
                 <th>Description</th>
                 <th>Price</th>
@@ -52,16 +52,19 @@
             </thead>
             <tbody>
             <tr>
+                <td><img class="logo-img-top" src="images/tyreRep.jpeg" alt="Logo image" style="width:50%"></td>
                 <td>Tire Change</td>
                 <td>Replace one or both of your tires</td>
                 <td>50$</td>
             </tr>
             <tr>
+                <td><img class="logo-img-top" src="images/brakes.png" alt="Logo image" style="width:50%"> </td>
                 <td>Brake Service</td>
                 <td>Checking brakes for function, and fixing if broken</td>
                 <td>35$</td>
             </tr>
             <tr>
+                <td><img class="logo-img-top" src="images/seat.png" alt="Logo image" style="width:50%"></td>
                 <td>Seat Replacement</td>
                 <td>Replace your seat with part of our collection</td>
                 <td>15$</td>
@@ -165,7 +168,11 @@
             </div>
         </div>
     <!--Ensure affordance and Consistency are met through these-->
-
+    <div class="container-md p-3 mt-3 border bg-dark text-white d-flex flex-column align=center">
+        <p>We'll take care of your bicycle problems!</p>
+        <p>Find us at 336 Elgen St. Ottawa</p> 
+    </div>
 
 </body>
+
 </html>
