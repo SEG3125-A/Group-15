@@ -73,7 +73,7 @@
     <!--Staff who provide the services-->
     <div class="container">
         <h2>More information</h2>
-        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
+        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Click here to meet our mechanics</a>
         <div id="mechanics" class="collapse">
             <div class="card-columns">
                 <div class="card bg-warning" style="width:160px">
@@ -113,7 +113,57 @@
         Select a service, 
         Select a date&time for that Service, 
         Enter Contact Information: CONSTRAINTS, ensure only the requested info can be input (instructions slide 11)-->
-
+        
+        <br><br>
+        <!-- Action code sampled from the example code given but adjusted to fit our scenario -->
+        <div class="container"> 
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                    </div>
+                    <div id="collapseService" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Here is our list of services</p>
+                            <input type="checkbox" id="service" class="service-checkbox"> Tire change <br>
+                            <input type="checkbox" id="service" class="service-checkbox"> Break Service <br>
+                            <input type="checkbox" id="service" class="service-checkbox"> Seat Replacement <br>
+                            
+                        </div>
+                    </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                    </div>
+                    <div id="collapseDate" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <!-- Bootstrap has various input components. Some examples are given here: -->
+                            <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                            <div class="form-group row">
+                                <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Input your contact information</a>
+                    </div>
+                    <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            
+                            <label for="fname">First and Last name:</label>
+                            <input type="text" id="fname" name="fname" placeholder="Ex. John Smith" size="50"><br>
+                            <label for="Number">Phone number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Ex. 123-456-7890" size="15"><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!--Ensure affordance and Consistency are met through these-->
 
 
