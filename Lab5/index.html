@@ -116,14 +116,14 @@
                     <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Caroline</h4>
-                        <p class="card-text">Head Mechanic.</p>
+                        <p class="card-text">Head Mechanic</p>
                     </div>
                 </div>
                 <div class="card bg-warning" style="width:160px">
                     <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
-                        <h4 class="card-title">5</h4>
-                        <p class="card-text">Erwind's Apprentice.</p>
+                        <h4 class="card-title">Johnny</h4>
+                        <p class="card-text">Tire Specialist</p>
                     </div>
                 </div>
             </div>
@@ -154,6 +154,40 @@
                         
                     </div>
                 </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseMechanicSelection">Select a mechanic</a>
+                </div>
+                <div id="collapseMechanicSelection" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        
+                        <fieldset>                          
+                            <div>
+                              <input type="radio" id="erwind" name="drone" value="erwind" checked />
+                              <label for="erwind">Erwind</label>
+                            </div>
+                          
+                            <div>
+                              <input type="radio" id="jacques" name="drone" value="jacques" />
+                              <label for="jacques">Jacques</label>
+                            </div>
+                          
+                            <div>
+                              <input type="radio" id="caroline" name="drone" value="caroline" />
+                              <label for="caroline">Caroline</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="johnny" name="drone" value="johnny" />
+                                <label for="johnny">Jonny</label>
+                              </div>
+                          </fieldset>
+                    </div>
+                </div>
+            </div>
+
             <div class="card">
                 <div class="card-header">
                     <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
@@ -171,6 +205,8 @@
                     </div>
                 </div>
             </div>
+            
+            
 
             <div class="card">
                 <div class="card-header">
@@ -186,6 +222,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="card">
                 <div class="card-header">
                     <a class="collapsed card-link" data-toggle="collapse" href="#collapsePaymentInfo">Input your payment information</a>
