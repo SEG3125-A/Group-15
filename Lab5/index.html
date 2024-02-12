@@ -11,7 +11,7 @@
 
 <!-- The head should contain an appropriate title for your site -->
 <head>
-    <title>Laboratry 4 - Bootstrap Design Principles</title>
+    <title>Laboratry 5 - Bootstrap Design Principles Continued</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,17 +28,36 @@
 <body>
     <!--Company information VISIBILITY-->
     <!--Container holding the company title, logo and address-->
+    <div id="menu-buffer" class="margin-top" style="height:60px"></div>
+
     <div class="container-md p-3 mb-3 border bg-dark text-white justify-content-center">
         <div class="d-flex flex-row">
             <img class="logo-img-top p-3" src="images/logo.jpg" alt="Logo image" style="width:10%">
             <h1 class="p-4">Ottawa Bike Shop</h1>
         </div>
     </div>
+      
+    <nav id="navbar-example2" class="navbar fixed-top navbar-light bg-light px-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#list-services">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#list-mechanics">Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#list-booking">Booking</a>
+            </li>
+            </ul>
+        </div>
+      </nav>
 
     <!--Services + Prices block-->
         <!--DESIGN PRINCIPLE Mapping: Provide images alongside services-->
 
-    <div class="container">
+    <div class="container" id="list-services">
         <h2>Service description</h2>
         <p>Here is a list of services offered</p>            
         <table class="table table-primary table-hover">
@@ -74,8 +93,8 @@
     </div>
 
     <!--Staff who provide the services-->
-    <div class="container">
-        <h2>More information</h2>
+    <div class="container" id="list-mechanics">
+        <h2>Our Team</h2>
         <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Click here to meet our mechanics</a>
         <div id="mechanics" class="collapse">
             <div class="card-columns">
@@ -117,56 +136,75 @@
         Select a date&time for that Service, 
         Enter Contact Information: CONSTRAINTS, ensure only the requested info can be input (instructions slide 11)-->
         
-        <br><br>
-        <!-- Action code sampled from the example code given but adjusted to fit our scenario -->
-        <div class="container"> 
-            <div id="accordion">
-                <div class="card">
-                    <div class="card-header">
-                        <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+    <br><br>
+    <!-- Action code sampled from the example code given but adjusted to fit our scenario -->
+    <div class="container" id="list-booking"> 
+        <h2>Booking</h2>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Here is our list of services</p>
+                        <input type="checkbox" id="service" class="service-checkbox"> Tire change <br>
+                        <input type="checkbox" id="service" class="service-checkbox"> Break Service <br>
+                        <input type="checkbox" id="service" class="service-checkbox"> Seat Replacement <br>
+                        
                     </div>
-                    <div id="collapseService" class="collapse show" data-parent="#accordion">
-                        <div class="card-body">
-                            <p>Here is our list of services</p>
-                            <input type="checkbox" id="service" class="service-checkbox"> Tire change <br>
-                            <input type="checkbox" id="service" class="service-checkbox"> Break Service <br>
-                            <input type="checkbox" id="service" class="service-checkbox"> Seat Replacement <br>
-                            
-                        </div>
-                    </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
-                    </div>
-                    <div id="collapseDate" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                            <!-- Bootstrap has various input components. Some examples are given here: -->
-                            <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                            <div class="form-group row">
-                                <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                                <div class="col-10">
-                                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
-                                </div>
+                </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <!-- Bootstrap has various input components. Some examples are given here: -->
+                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <div class="form-group row">
+                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                            <div class="col-10">
+                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Input your contact information</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Input your contact information</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        
+                        <label for="fname">First and Last name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Ex. John Smith" size="50"><br>
+                        <label for="Number">Phone number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Ex. 123-456-7890" size="15"><br>
                     </div>
-                    <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                            
-                            <label for="fname">First and Last name:</label>
-                            <input type="text" id="fname" name="fname" placeholder="Ex. John Smith" size="50"><br>
-                            <label for="Number">Phone number:</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Ex. 123-456-7890" size="15"><br>
-                        </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapsePaymentInfo">Input your payment information</a>
+                </div>
+                <div id="collapsePaymentInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        
+                        <label for="fname">Credit Card Number:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Ex. 1234-5678-1234-56789" size="50"><br>
+                        <label for="Number">Expiration Date:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Ex. 01/31" size="15"><br>
+                        <label for="Number">CVV - Card Verification Value:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Ex. 321" size="15"><br>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
     <!--Ensure affordance and Consistency are met through these-->
     <div class="container-md p-3 mt-3 border bg-dark text-white d-flex flex-column align=center">
         <p>We'll take care of your bicycle problems!</p>
