@@ -217,8 +217,11 @@
                         
                         <label for="fname">First and Last name:</label>
                         <input type="text" id="fname" name="fname" placeholder="Ex. John Smith" size="50"><br>
-                        <label for="Number">Phone number:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Ex. 123-456-7890" size="15"><br>
+                        
+                        <form action="" method="post" id="cusCreate" autocomplete="off">
+                            <label for="telphone">Phone number</label>
+                            <input type="tel" id="telphone" name="telphone" placeholder="888-888-8888" pattern="[0-9]{3} [0-9]{3}[0-9]{4}" minlength="12" maxlength="12"  title="Ten digits code, inlude the hyphens (-)" required/>    
+                        </form>
                     </div>
                 </div>
             </div>
@@ -230,12 +233,20 @@
                 <div id="collapsePaymentInfo" class="collapse" data-parent="#accordion">
                     <div class="card-body">
                         
+                        <form>
                         <label for="fname">Credit Card Number:</label>
-                        <input type="text" id="fname" name="fname" placeholder="Ex. 1234-5678-1234-56789" size="50"><br>
+                        <input type="text" id="fname" name="fname" placeholder="Ex. 1234-5678-1234-5678" size="50" minlength="20" maxlength="20"  title="16 digits code, inlude the hyphens (-)" required/><br>
+                        </form>
+
+                        <form>
                         <label for="Number">Expiration Date:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Ex. 01/31" size="15"><br>
+                        <input type="tel" id="phone" name="phone" placeholder="Ex. 01/31" size="15" minlength="5" maxlength="5"  title="Month/Year" required/><br>
+                        </form>
+                        
+                        <form>
                         <label for="Number">CVV - Card Verification Value:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Ex. 321" size="15"><br>
+                        <input type="tel" id="phone" name="phone" placeholder="Ex. 321" size="15"minlength="3" maxlength="3"  title="3 digits" required/><br>
+                    </form>
                     </div>
                 </div>
             </div>
