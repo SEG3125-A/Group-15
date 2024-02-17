@@ -2,6 +2,16 @@
 /* Style sheet
    color picker www.w3schools.com/colors/colors_picker.asp
 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 /* Bootstrap default font-family is Helvetica Neue */
 h1 {

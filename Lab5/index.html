@@ -11,7 +11,7 @@
 
 <!-- The head should contain an appropriate title for your site -->
 <head>
-    <title>Laboratry 5 - Bootstrap Design Principles Continued</title>
+    <title>Lab 5 - Bootstrap Design Principles Continued</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,7 +22,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
 
     <!-- Your own additional style sheet -->
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -199,7 +200,7 @@
                         <div class="form-group row">
                             <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
                             <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+                                <input class="form-control" type="datetime-local" value="2024-02-17T13:45:00" id="dateTimeInput">
                             </div>
                         </div>
                     </div>
@@ -220,7 +221,7 @@
                         
                         <form action="" method="post" id="cusCreate" autocomplete="off">
                             <label for="telphone">Phone number</label>
-                            <input type="tel" id="telphone" name="telphone" placeholder="888-888-8888" pattern="[0-9]{3} [0-9]{3}[0-9]{4}" minlength="12" maxlength="12"  title="Ten digits code, inlude the hyphens (-)" required/>    
+                            <input type="number" id="telphone" name="telphone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="888-888-8888" minlength="12" maxlength="12"  title="Ten digits code, inlude the hyphens (-)" required/>    
                         </form>
                     </div>
                 </div>
@@ -235,17 +236,17 @@
                         
                         <form>
                         <label for="fname">Credit Card Number:</label>
-                        <input type="text" id="fname" name="fname" placeholder="Ex. 1234-5678-1234-5678" size="50" minlength="20" maxlength="20"  title="16 digits code, inlude the hyphens (-)" required/><br>
+                        <input type="number" id="paymentCard" name="fname" placeholder="Ex. 1234-5678-1234-5678" size="50" minlength="20" maxlength="20"  title="16 digits code, inlude the hyphens (-)" required/><br>
                         </form>
 
                         <form>
                         <label for="Number">Expiration Date:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Ex. 01/31" size="15" minlength="5" maxlength="5"  title="Month/Year" required/><br>
+                        <input type="tel" id="expDate" name="expDate" placeholder="Ex. 01/31" size="15" minlength="5" maxlength="5"  title="Month/Year" required/><br>
                         </form>
                         
                         <form>
                         <label for="Number">CVV - Card Verification Value:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Ex. 321" size="15"minlength="3" maxlength="3"  title="3 digits" required/><br>
+                        <input type="number" id="cvv" name="phone" placeholder="Ex. 321" size="15"minlength="3" maxlength="3"  title="3 digits" required/><br>
                     </form>
                     </div>
                 </div>
