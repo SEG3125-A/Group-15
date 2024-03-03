@@ -1,0 +1,119 @@
+<!--Edited by Christian Gibbs-->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+		<! IMPORTANT to use a CSS file - external >
+		<link href="styles.css" rel="stylesheet" type="text/css">
+    <title>Questionnaire of CBC.ca</title>
+  </head>
+  
+  <body>
+		<div class="header">
+			<h2 class="survey">Survey</h2>
+		</div>
+		
+		<form id="myform" action="index.php" >
+		<br>
+		<br>
+		<! Choose a website to evaluate >
+		<h2 class="surveyHeader">Let us know what you think about this <a href="https://www.cbc.ca/">CBC</a> site?</h2>	
+		<br>
+		<br>
+		<! You should make your image clickable>
+		<a href="https://www.cbc.ca/"><img src="CBC_Frontpage.PNG" alt="https://www.cbc.ca/" width="750" height="300"></a>
+		<br>
+		<br>
+
+		<div class="question"> <!--Personal information-->
+			<h2 class="section"> Personal Information </h2>
+			<p>First name: <input type="text" name="firstname"></p>
+			<p>Last name: <input type="text" name="lastname"></p>
+			<br>
+			<br>	
+		</div>	
+			
+		<div class="question"> <!--Questions: 
+				Text, Multi-Selectx2, Radio Choice, List Choice,-->
+			<h2 class="section"> What you like </h2>
+
+ 			<!-- How do you feel about the logo placement?:<br>
+			<textarea rows="5" cols="30"></textarea>
+			<br> -->
+			<p>On a scale from 1 to 5 how much do you like the look of the website: <br> <!--Radio Single Select-->
+				<input type="radio" id="q1" name="Question1" value="Question1">
+				<label for="q1">1 (I don't like it at all)</label><br>
+				<input type="radio" id="q1" name="Question1" value="Question2">
+				<label for="q2">2</label><br>
+				<input type="radio" id="q1" name="Question1" value="Question3">
+				<label for="q3">3</label><br>
+				<input type="radio" id="q1" name="Question1" value="Question4">
+				<label for="q4">4</label><br>
+				<input type="radio" id="q1" name="Question1" value="Question5">
+				<label for="q5">5 (I like it a lot)</label><br>
+			</p>
+
+
+			<p>On a scale from 1 to 5 how easy is it to navigate/understand : <br> <!--Radio Single Select-->
+				<input type="radio" id="q2" name="Question2" value="Question1">
+				<label for="q2">1 (Very easy)</label><br>
+				<input type="radio" id="q2" name="Question2" value="Question2">
+				<label for="q2">2</label><br>
+				<input type="radio" id="q2" name="Question2" value="Question3">
+				<label for="q3">3</label><br>
+				<input type="radio" id="q2" name="Question2" value="Question4">
+				<label for="q4">4</label><br>
+				<input type="radio" id="q2" name="Question2" value="Question5">
+				<label for="q5">5 (Very hard)</label><br>
+			</p>
+
+			<p>What is your favorite part of the website</p><br> <!--List Single Select--> 
+			<select id="favorite">
+				<option value="1" selected="selected">Articles/Videos</option>
+				<option value="2">The look of the website</option>
+				<option value="3">Easily accessible</option>
+				<option value="4">Other</option>
+			</select>
+			<br>
+			<br>
+
+			<p>What could be improved?:</p><br> <!--Multiple Selection1-->
+			<input type="checkbox" name="Color" value="Red">How it looks<br>
+			<input type="checkbox" name="Color" value="Green">Layout of buttons and articles<br>
+			<input type="checkbox" name="Color" value="Blue">Other<br>
+			
+			<br>
+
+			<label for="purpose"><p>Why do you use this website?</p></label><br>
+			<input type="text" id="purpose" name="purpose"><br>
+			
+
+		<p>If Other was selected please explain:</p><br>	<!--Comments-->
+			<textarea rows="5" cols="30"></textarea>
+			
+			<br>
+			
+
+			<br>
+			<br>
+		<p>Addtionnal Comments?:</p><br>	<!--Comments-->
+			<textarea rows="5" cols="30"></textarea>
+			<br>
+			<br>
+
+		</div>
+	
+
+	
+			
+	<button id="submitButton" type="button" class="block">
+		SUBMIT 
+	</button>
+		
+	<p id="signature">Website designed by Christian Gibbs ,Keynaan Ismail and IleriOluwa Fasubaa</p>	
+	
+	</form>
+  </body>
+</html> 
