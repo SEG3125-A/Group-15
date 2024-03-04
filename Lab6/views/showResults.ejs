@@ -11,17 +11,32 @@
         <li><%= results[0][i].color %> :  <%= results[0][i].count %></li>
     <% } %>    
     </ul>
-    <h2>Fruits</h2>
+    <h2>Food</h2>
     <ul>
     <% for (var i=0; i<results[1].length; i++){ %>
-        <li><%= results[1][i].fruit %> :  <%= results[1][i].count %></li>
+        <li><%= results[1][i].food %> :  <%= results[1][i].count %></li>
     <% } %>    
     </ul>
-    <h2>Animals</h2>
+    <h2>Accomodation</h2>
     <ul>
     <% for (var i=0; i<results[2].length; i++){ %>
-        <li><%= results[2][i].animal %> :  <%= results[2][i].count %></li>
+        <li><%= results[2][i].accomodation %> :  <%= results[2][i].count %></li>
     <% } %>    
     </ul>
+
+    <h2>Travel Mode</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].travelmode %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>Destination</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].destiination %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+    
 </body>
 </html>
