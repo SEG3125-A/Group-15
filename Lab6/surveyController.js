@@ -41,23 +41,27 @@ module.exports = function(app){
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function(req, res){
+        var cuisine = readData("cuisine");
+        var destination = readData("destination");
+        var foodType = readData("foodtype");
         var color = readData("color");
-        var fruit = readData("fruit");
-        var animal = readData("animal");
-        res.render('showResults', {results: [color, fruit, animal]});
-        console.log([color, fruit, animal]);
+        var accomodation = readData("accomodation");
+        var travelMode = readData("travelMode");
+        
+        res.render('showResults', {results: [cuisine, destination, foodType, color, accomodation, travelMode]});
+        console.log([cuisine, destination, foodType, color, accomodation, travelMode]);
     });
 
     // when a user goes to localhost:3000/niceSurvey
     // serve a static html (the survey itself to fill in)
-    app.get('/niceSurvey', function(req, res){
-        res.sendFile(__dirname+'/views/niceSurvey.html');
+    app.get('/index', function(req, res){
+        res.sendFile(__dirname+'/views/index.html');
     });
 
     // when a user types SUBMIT in localhost:3000/niceSurvey 
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
-    app.post('/niceSurvey', urlencodedParser, function(req, res){
+    app.post('/index', urlencodedParser, function(req, res){
         console.log(req.body);
         var json = req.body;
         for (var key in json){
@@ -74,7 +78,7 @@ module.exports = function(app){
         }
         // mystery line... (if I take it out, the SUBMIT button does change)
         // if anyone can figure this out, let me know!
-        res.sendFile(__dirname + "/views/niceSurvey.html");
+        res.sendFile(__dirname + "/views/index.html");
     });
     
 
