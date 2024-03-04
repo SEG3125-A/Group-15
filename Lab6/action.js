@@ -7,7 +7,7 @@ $(document).ready(function(){
   
         $.ajax({
           type: 'POST',
-          url: '/niceSurvey',
+          url: '/surveySubmition',
           data: $(this).serializeArray(),
           success: function(data){
             // do something with the data via front-end framework
