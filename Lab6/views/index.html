@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  </head>
+  
+  <body>
+	
+	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
+    <h1>Survey</h1>
+    <form>
+      <h2> What is your favorite cusine </h2>
+      I like:<br>
+      <input type="text" name="cuisine" placeholder="cuisine name..." required />
+      <br>
+	  <br>
+      <br>
+	  <h2> What is your favorite mode of travel </h2>
+      I like:<br>
+      <input type="text" name="travel mode" placeholder="travel mode..." required />
+      <br>
+	  <br>
+      <br>
+	  <h2> Which accomodation type do you prefer </h2>
+      I like:<br>
+      <input type="checkbox" name="accomodation" value="Hotel"> Hotel<br>
+		  <input type="checkbox" name="accomodation" value="AirBnB"> AirBnB<br>
+      <input type="checkbox" name="accomodation" value="Hostel"> Hostel<br>
+      <br>
+      <br>
+      <h2> What color(s) do you like? </h2>
+	    I like:<br>
+		  <input type="checkbox" name="color" value="Red"> Red<br>
+		  <input type="checkbox" name="color" value="Green"> Green<br>
+      <input type="checkbox" name="color" value="Blue"> Blue<br>
+      <br>
+      <h2>What type of food do you prefer?</h2>
+      I like:<br>
+      <select name="animal">
+			  <option value="Sweet" selected="selected">Sweet</option>
+			  <option value="Savory">Savory</option>
+      </select>
+      <br>
+      <br>
+	  <h2> What is your favorite holiday destination </h2>
+      <br>
+      <input type="text" name="destination" placeholder="destination..." required />
+      <br>
+	  <br>
+      <br>
+      <button type="submit" class="btn btn-warning" id="submitButton">Submit</button>
+      <p id="thanks"></p>
+    </form>
+    </div>
+	<script src="/action.js"></script>
+  </body>
+</html> 
