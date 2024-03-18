@@ -16,7 +16,7 @@ function App() {
   ]);
 
   const addReview = (names, media,date, review) => {
-    setReviews([...reviews, [names, media, date, review]]);
+    setReviews([[names, media, date, review], ...reviews]);
   }
   return (
     <div >

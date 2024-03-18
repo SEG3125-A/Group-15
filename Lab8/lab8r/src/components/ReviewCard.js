@@ -1,5 +1,4 @@
 import React from 'react';
-import { reviews } from '../reviews';
 import { useState } from 'react';
 
 export default function ReviewCard({addReview}) {
