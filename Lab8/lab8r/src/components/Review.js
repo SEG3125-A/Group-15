@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Review({name, media, date, review}) {
-    
+    //change color of like and dislike button
   return (
     <div style={{height: 220, width: 900, backgroundColor: 'lightgrey', borderRadius: 5, padding: 20, margin: 20, borderWidth: 2, borderColor: 'black'}}>
     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
