@@ -46,7 +46,9 @@ function App() {
         <div>
         <ReviewCard addReview={addReview} language={language}/>
         </div>
+        
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', marginTop: 120}}>
+        <h2>{language ? 'Review Board' : 'Affichage de revues'}</h2>
         {reviews.map((review, index) => (
       <Review
         //key={index}
